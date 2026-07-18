@@ -1,4 +1,4 @@
 services:
   api:
     environment:
-      DB_HOST: localhost
+      DB_HOST: localhost  # Replace the DB_HOST value from db to loclhost, and it will become unhealthy because no service exsit with name localhost
