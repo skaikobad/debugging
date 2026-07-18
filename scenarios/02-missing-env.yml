@@ -1,5 +1,5 @@
 services:
   api:
     environment:
-      DB_PASSWORD: ""
+      DB_PASSWORD: ""  # This will override the Environment of api service which is defined in compose.base.yml file
     restart: "no"
