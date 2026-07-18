@@ -16,7 +16,7 @@ services:
   api:
     build: ./app
     environment:
-      DB_HOST: db
+      DB_HOST: db        # refers to the service name db defined above
       DB_PORT: 5432
       DB_USER: labuser
       DB_PASSWORD: labpass
