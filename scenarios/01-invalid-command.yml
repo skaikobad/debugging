@@ -1,4 +1,4 @@
 services:
   api:
-    command: ["npm", "run", "start-does-not-exist"]
+    command: ["npm", "run", "start-does-not-exit"]   # This will override the Dockerfile CMD layer and it will fail because "start-does-not-exit" does not exit in package.json file under the scripts section
     restart: "no"
