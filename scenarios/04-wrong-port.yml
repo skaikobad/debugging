@@ -1,4 +1,8 @@
 services:
   api:
     ports:
-      - "3000:5000"
+      - "4000:5000"
+      #This will append to the compose file port list. container will start with multiple ports (i.e host port 3000 and 4000)
+      #Compose file port mapping (3000:3000) will work because the container listens on port 3000 (Expose in Dockerfile)
+      #This port mapping (4000:5000) will not work because the container listens on port 3000, not 5000
+
