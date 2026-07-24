@@ -2,3 +2,8 @@ services:
   api:
     environment:
       BIND_ADDRESS: 127.0.0.1
+      #The container will try to bind to 127.0.0.1:3000 (localhost inside the container)
+      #127.0.0.1 inside the container is the container's own loopback interface
+      #This configuration will break the application because the API binds to 127.0.0.1 instead of 0.0.0.0
+      #Making it inaccessible from other containers (like nginx) and from the host machine.
+      #The only way to access the API would be from inside the API container itself.
